@@ -101,7 +101,7 @@ fn main() {
             if i == 0 {
                 "Max ΔV from single burn →\nNumber of tanks ↓".to_owned()
             } else {
-                TARGET_DVS[i - 1].to_string()
+                format!("{:.0} m/s", TARGET_DVS[i - 1])
             }
         });
         r
@@ -117,6 +117,16 @@ fn main() {
         });
         table.add_row(r);
     }
+
+    table
+        .column_iter_mut()
+        .skip(1)
+        .for_each(|column| column.set_cell_alignment(comfy_table::CellAlignment::Right));
+    table
+        .column_mut(0)
+        .expect("Always should be header column")
+        .set_cell_alignment(comfy_table::CellAlignment::Center);
+
     println!("{table}");
 }
 
