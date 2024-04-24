@@ -1,5 +1,10 @@
 /**
  * Everything is in SI units
+ * Constants gotten from the following KSP wiki articles:
+ * * [IX-6315 "Dawn" Electric Propulsion System](https://wiki.kerbalspaceprogram.com/wiki/IX-6315_%22Dawn%22_Electric_Propulsion_System)
+ * * [Xenon gas](https://wiki.kerbalspaceprogram.com/wiki/Xenon_gas)
+ * * [PB-X50R Xenon Container](https://wiki.kerbalspaceprogram.com/wiki/PB-X50R_Xenon_Container)
+ * * [Z-100 Rechargeable Battery Pack](https://wiki.kerbalspaceprogram.com/wiki/Z-100_Rechargeable_Battery_Pack)
  **/
 
 /// in kg
