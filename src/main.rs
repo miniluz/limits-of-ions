@@ -14,9 +14,9 @@ fn main() {
     const MAX_TANKS: usize = 10;
     const ITERATION_LIMIT: usize = 100;
 
-    const TARGET_DVS: [f64; 21] = [
+    const TARGET_DVS: [f64; 24] = [
         10., 20., 30., 50., 80., 100., 150., 200., 250., 300., 350., 400., 450., 500., 600., 700.,
-        800., 900., 1000., 1100., 1200.,
+        800., 900., 1000., 1100., 1200., 1300., 1400., 1500.,
     ];
     const TARGET_DVS_LEN: usize = TARGET_DVS.len();
 
@@ -99,7 +99,7 @@ fn main() {
     table.set_header({
         let r: [String; TARGET_DVS_LEN + 1] = std::array::from_fn(|i| {
             if i == 0 {
-                "Required ΔV →\nNumber of tanks ↓".to_owned()
+                "Max ΔV from single burn →\nNumber of tanks ↓".to_owned()
             } else {
                 TARGET_DVS[i - 1].to_string()
             }
